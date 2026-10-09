@@ -2,9 +2,9 @@ class LibraryCatalogLookup{
     public void findBook(String catalog[][], String targetIsbn){
         String ISBN;
         String title;
-        for (int i=0; i<catalog.length; i++){
-            ISBN = catalog[i][0];
-            title = catalog[i][1]; // Assuming title is the next element in the array
+        for (String[] catalog1 : catalog) {
+            ISBN = catalog1[0];
+            title = catalog1[1]; // Assuming title is the next element in the array
             if (ISBN.equals(targetIsbn)){
                 System.out.println("Book found: " + title);
                 return;
